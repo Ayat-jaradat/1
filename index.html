@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مبادرة كلنا معك</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --violet:#7b2fa6;
+      --violet-light:#9c4bd6;
+      --orange:#ff7b3d;
+      --text:#1a1a1a;
+      --muted:#555;
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Cairo",sans-serif;
+      background:url("background.jpg") no-repeat center/cover fixed;
+      color:var(--text);
+      line-height:1.6;
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+    }
+    .overlay{
+      position:fixed;
+      top:0;left:0;right:0;bottom:0;
+      background:rgba(255,255,255,0.6);
+      backdrop-filter:blur(6px);
+      z-index:-1;
+    }
+    .container{
+      max-width:1100px;
+      width:100%;
+      display:grid;
+      grid-template-columns:380px 1fr;
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:rgba(255,255,255,0.25);
+      backdrop-filter:blur(14px);
+      box-shadow:0 12px 40px rgba(123,47,166,0.25);
+    }
+    @media(max-width:880px){.container{grid-template-columns:1fr}}
+
+    /* الجانب */
+    .side{
+      background:linear-gradient(160deg,var(--violet),var(--violet-light),var(--orange));
+      color:white;
+      padding:30px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .side img{
+      width:160px;
+      margin-bottom:20px;
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+    }
+    .side h1{font-size:28px;margin:10px 0;font-weight:800}
+    .side p{font-size:15px;opacity:0.9}
+
+    .actions{
+      margin-top:25px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      width:100%;
+    }
+    .btn{
+      display:block;
+      padding:14px;
+      border-radius:var(--radius);
+      text-decoration:none;
+      text-align:center;
+      font-weight:700;
+      font-size:15px;
+      transition:all .2s ease;
+      border:none;
+      cursor:pointer;
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,var(--orange),var(--violet));
+      color:white;
+      box-shadow:0 6px 14px rgba(0,0,0,0.15);
+    }
+    .btn.primary:hover{opacity:0.9}
+    .btn.secondary{
+      background:rgba(255,255,255,0.2);
+      color:white;
+      border:1px solid rgba(255,255,255,0.3);
+    }
+    .btn.secondary:hover{background:rgba(255,255,255,0.35)}
+
+    /* القسم الرئيسي */
+    .main{
+      padding:30px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    h2{font-size:22px;margin:0;color:var(--violet)}
+    p{margin:0;color:var(--muted)}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+    }
+    .card{
+      background:rgba(255,255,255,0.65);
+      backdrop-filter:blur(10px);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:transform .2s ease;
+      border-top:4px solid var(--orange);
+    }
+    .card:hover{transform:translateY(-4px)}
+    .card h3{margin:0 0 8px 0;font-size:17px;color:var(--violet)}
+    .card p{font-size:14px}
+
+    footer{
+      margin-top:20px;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,0.4);
+      font-size:14px;
+      color:var(--muted);
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <!-- القسم الجانبي -->
+    <aside class="side">
+      <img src="logo.png" alt="شعار مبادرة كلنا معك">
+      <h1>مبادرة كلنا معك</h1>
+      <p>مبادرة تطوعية تخدم المجتمع بروح التعاون والعمل الجماعي.</p>
+
+      <div class="actions">
+        <a href="tel:+962781642206" class="btn primary">📞 اتصل الآن</a>
+        <a href="https://wa.me/962781642206" target="_blank" class="btn secondary">💬 تواصل عبر واتساب</a>
+      </div>
+    </aside>
+
+    <!-- القسم الرئيسي -->
+    <section class="main">
+      <div>
+        <h2>عن المبادرة</h2>
+        <p>
+          تهدف مبادرة <strong>كلنا معك</strong> إلى تعزيز روح العمل التطوعي،
+          وبناء مجتمع متعاون يسعى لترك أثر إيجابي من خلال أنشطة اجتماعية،
+          ثقافية، وإنسانية.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🤝 التطوع</h3>
+          <p>تنظيم أنشطة مجتمعية هادفة تفتح المجال أمام الجميع للمشاركة.</p>
+        </div>
+        <div class="card">
+          <h3>📚 التوعية</h3>
+          <p>إطلاق حملات تثقيفية ترفع الوعي وتعزز المسؤولية المجتمعية.</p>
+        </div>
+        <div class="card">
+          <h3>🌱 الأثر</h3>
+          <p>السعي لخلق مشاريع مستدامة تترك بصمة حقيقية في حياة الأفراد.</p>
+        </div>
+      </div>
+
+      <footer>
+        ©️ 2025 مبادرة كلنا معك — جميع الحقوق محفوظة
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
